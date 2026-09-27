@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <title>Privacy Policy — MarkRead — Markdown Reader</title>
+  <meta name="description" content="Privacy Policy for MarkRead — Markdown Reader, an Android app that reads Markdown files stored on your device.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="site">
+      <p class="eyebrow">MarkRead — Markdown Reader</p>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: <time datetime="2026-09-27">27 September 2026</time></p>
+    </header>
+
+    <nav class="toc" aria-label="Contents">
+      <strong>Contents</strong>
+      <ol>
+        <li><a href="#about">About MarkRead</a></li>
+        <li><a href="#developer">Developer information</a></li>
+        <li><a href="#collect">Information we collect</a></li>
+        <li><a href="#not-collected">Information we do not collect</a></li>
+        <li><a href="#use">How we use information</a></li>
+        <li><a href="#storage">Data storage</a></li>
+        <li><a href="#sharing">Data sharing and third parties</a></li>
+        <li><a href="#security">Data security</a></li>
+        <li><a href="#retention">Data retention</a></li>
+        <li><a href="#accounts">Account creation and deletion</a></li>
+        <li><a href="#choices">User choices and rights</a></li>
+        <li><a href="#children">Children’s privacy</a></li>
+        <li><a href="#services">Third-party services</a></li>
+        <li><a href="#changes">Changes to this Privacy Policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </nav>
+
+    <section id="about">
+      <h2>About MarkRead</h2>
+      <p>MarkRead — Markdown Reader is an Android app that finds Markdown notes already stored on your device, lists them, and opens them for reading. You can mark a note read or unread, resume an unfinished note, and save a PDF copy of an open note into the device’s Downloads folder.</p>
+      <p>The name shown on the device is <strong>MarkRead</strong>. The Android application ID is <strong>com.reyaz.markread</strong>.</p>
+      <p>MarkRead does not create user accounts and does not upload your notes to a server operated by the developer. The library, search, and reading record stay on the device, except for the cases described in this policy: a font-file request handled by Google Play services, and a link or PDF that you choose to open in another app.</p>
+    </section>
+
+    <section id="developer">
+      <h2>Developer information</h2>
+      <p>MarkRead — Markdown Reader is published by <strong>Mohammad Arman</strong>, an individual developer.</p>
+      <ul>
+        <li>Developer email: <a href="mailto:armanjmi2022@gmail.com">armanjmi2022@gmail.com</a></li>
+        <li>Privacy and support email: <a href="mailto:markread.support@gmail.com">markread.support@gmail.com</a></li>
+      </ul>
+      <p>Use the privacy and support email for questions about this policy or about how the app handles information.</p>
+    </section>
+
+    <section id="collect">
+      <h2>Information we collect</h2>
+      <p>In this policy, “collect” means information the app accesses, stores, or processes. Most of that information stays on your device. Each item below states whether a copy leaves the device.</p>
+
+      <article class="card">
+        <h3>Markdown files on your device</h3>
+        <dl>
+          <dt>What data is involved</dt>
+          <dd>Files whose names end in <code>.md</code> or <code>.markdown</code>. For each file the app can read the file name, size, last-modified time, content URI, and file path. When you open a note, the app reads the file’s text. When you export a PDF, the app reads that text again on the device to build the PDF.</dd>
+          <dt>Whether it is collected</dt>
+          <dd>The app accesses these files on the device. It does not collect them onto a developer server.</dd>
+          <dt>Whether it is stored</dt>
+          <dd>The note text is not copied into the app database. The app stores a local catalog of file details. The original Markdown file stays where it already was. A PDF you export is a new file in Downloads.</dd>
+          <dt>Whether it leaves the device</dt>
+          <dd>Note text, file names, and paths are not sent to the developer. If you tap a web link in a note, MarkRead hands that address to another app you choose, usually a browser. If you open an exported PDF from the download notification, MarkRead hands that PDF to another app you choose.</dd>
+          <dt>Why it is used</dt>
+          <dd>To list your notes, open a note, show its contents, and create a PDF when you ask for one.</dd>
+          <dt>Where it is stored</dt>
+          <dd>Catalog details are in a private database named <code>markdownone.db</code>. Markdown files and exported PDFs are in shared device storage, including Downloads.</dd>
+          <dt>Whether it is shared, and who receives it</dt>
+          <dd>It is not shared with the developer, an analytics service, or an advertising service. A browser or PDF app receives a link or a PDF only when you choose to open one.</dd>
+          <dt>How long it is retained</dt>
+          <dd>The Markdown file remains until you delete it. The catalog row remains until you delete that note in MarkRead, a library refresh no longer sees the file, you clear MarkRead’s storage, or you uninstall MarkRead. An exported PDF remains in Downloads until you delete that PDF. Deleting a note in MarkRead does not delete a PDF already saved from it.</dd>
+          <dt>How you can delete it</dt>
+          <dd>On the document list, swipe a note and choose Delete. That deletes the Markdown file from device storage and removes its catalog row. Delete exported PDFs from the device’s Downloads or Files app. Clearing MarkRead’s storage, or uninstalling MarkRead, removes the catalog and does not remove Markdown files or PDFs that remain in shared storage.</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h3>Storage access used to find those files</h3>
+        <dl>
+          <dt>What data is involved</dt>
+          <dd>On Android 11 and later, MarkRead requests All files access. On Android 10 and earlier, it requests permission to read shared storage. Permission to write shared storage is declared only through Android 12, so older versions can save a PDF into the public Downloads folder.</dd>
+          <dt>What the scan covers</dt>
+          <dd>With that access, MarkRead queries the device media index for Markdown file names and walks shared storage. The walk includes the main shared-storage folder and the public Downloads, Documents, Notes, and Obsidian folders, up to eight directory levels. It skips hidden folders and folders named android, cache, tmp, temp, .thumbnails, and lost.dir. It keeps only <code>.md</code> and <code>.markdown</code> files.</dd>
+          <dt>Whether it is collected or leaves the device</dt>
+          <dd>No. Granting storage access does not send your files to the developer.</dd>
+          <dt>Why it is used</dt>
+          <dd>Your notes are ordinary files on the device. The app needs this access to list them, open them, delete one when you ask, and write a PDF into Downloads on older Android versions.</dd>
+          <dt>Where it is stored and who receives it</dt>
+          <dd>The permission is a device setting. File details found by the scan are stored only in the on-device catalog described above. No third party receives the scan.</dd>
+          <dt>How long it is retained, and how you can delete it</dt>
+          <dd>You can deny or turn off storage access in Android Settings. The catalog created from a scan follows the retention rules for Markdown files above.</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h3>Reading activity stored on the device</h3>
+        <dl>
+          <dt>What data is involved</dt>
+          <dd>For each note in the catalog, the app can store whether you marked it read, when you last opened it, when it entered the recent list, a heading identifier and position used to resume reading, and the time the file was indexed.</dd>
+          <dt>Whether it is collected</dt>
+          <dd>It is created on the device. It is not collected by a server.</dd>
+          <dt>Whether it is stored</dt>
+          <dd>Yes, in <code>markdownone.db</code> in the app’s private storage.</dd>
+          <dt>Whether it leaves the device</dt>
+          <dd>No.</dd>
+          <dt>Why it is used</dt>
+          <dd>To filter All, Recent, Read, and Unread, to keep up to ten unfinished notes in Recent, to restore your place when you reopen an unfinished note, and to mark a note read when you reach the end.</dd>
+          <dt>Whether it is shared, and who receives it</dt>
+          <dd>It is not shared. No third party receives it.</dd>
+          <dt>How long it is retained</dt>
+          <dd>Until you delete that note in the app, a library refresh drops the file because it is no longer found, you clear MarkRead’s storage, or you uninstall the app. A refresh that still finds the same file keeps the reading record when the file address matches, or when the file name and size match.</dd>
+          <dt>How you can delete it</dt>
+          <dd>Delete the note in MarkRead, clear MarkRead’s storage, or uninstall the app. Marking a note unread clears the read flag and keeps the catalog row.</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h3>First-launch flag</h3>
+        <dl>
+          <dt>What data is involved</dt>
+          <dd>A yes-or-no value named <code>isFirstLaunch</code> in a private preferences file named <code>markdown_one_launch</code>. It is not your name, account, or a device identifier.</dd>
+          <dt>Whether it is collected</dt>
+          <dd>No. It stays on the device.</dd>
+          <dt>Whether it is stored</dt>
+          <dd>Yes, in app-private SharedPreferences.</dd>
+          <dt>Whether it leaves the device</dt>
+          <dd>No.</dd>
+          <dt>Why it is used</dt>
+          <dd>So the first launch can scan for Markdown files before opening the library. After that scan, the app sets the flag to show that the first launch is finished.</dd>
+          <dt>Whether it is shared, and who receives it</dt>
+          <dd>It is not shared.</dd>
+          <dt>How long it is retained</dt>
+          <dd>Until you clear MarkRead’s storage or uninstall the app. The app does not offer a separate control to reset this flag.</dd>
+          <dt>How you can delete it</dt>
+          <dd>Clear MarkRead’s storage, or uninstall MarkRead.</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h3>Search text</h3>
+        <dl>
+          <dt>What data is involved</dt>
+          <dd>The text you type into the library search field.</dd>
+          <dt>Whether it is collected</dt>
+          <dd>No.</dd>
+          <dt>Whether it is stored</dt>
+          <dd>It is held in memory while the library screen is open. It is not written to the database or to preferences.</dd>
+          <dt>Whether it leaves the device</dt>
+          <dd>No.</dd>
+          <dt>Why it is used</dt>
+          <dd>To filter the catalog by file name. Search does not read note contents and does not send the query anywhere.</dd>
+          <dt>Where it is stored, and who receives it</dt>
+          <dd>Only in memory on the device. It is not shared.</dd>
+          <dt>How long it is retained</dt>
+          <dd>Until you change or clear the field, or you leave the app. It is not kept after that.</dd>
+          <dt>How you can delete it</dt>
+          <dd>Clear the search field.</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h3>PDF export and its notification</h3>
+        <dl>
+          <dt>What data is involved</dt>
+          <dd>A PDF created on the device from the open note and saved in Downloads. The app can show a local notification with the PDF file name and a status such as downloading, saved, or failed. On Android 13 and later, the app asks for notification permission when you start an export.</dd>
+          <dt>Whether it is collected</dt>
+          <dd>No. The PDF is written on the device. The notification is shown by the device. MarkRead does not use a push-notification service.</dd>
+          <dt>Whether it is stored</dt>
+          <dd>The PDF is stored in shared Downloads. While the export job runs, the app’s background work scheduler keeps that job’s document id, file name, and file address in private app storage.</dd>
+          <dt>Whether it leaves the device</dt>
+          <dd>The app does not upload the PDF. If you tap the finished notification, the device opens a chooser so you can view the PDF in another app. That other app then receives the PDF.</dd>
+          <dt>Why it is used</dt>
+          <dd>To give you a PDF copy when you choose Download as PDF, and to show whether that save is running, finished, or failed.</dd>
+          <dt>Whether it is shared, and who receives it</dt>
+          <dd>Only the app you pick from the chooser receives the PDF, and only if you open it. The developer does not receive it.</dd>
+          <dt>How long it is retained</dt>
+          <dd>The PDF stays in Downloads until you delete it. The export job details stay until the job finishes or the system discards it. The notification stays until you dismiss it or the system removes it.</dd>
+          <dt>How you can delete it</dt>
+          <dd>Delete the PDF in Downloads or Files. Dismiss the notification. Denying notification permission stops these notifications. The export still runs after you answer that permission prompt. MarkRead has no separate control that deletes PDFs already saved.</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h3>Font request handled by Google Play services</h3>
+        <dl>
+          <dt>What data is involved</dt>
+          <dd>MarkRead asks the Google Play services font provider on the device for the font families Newsreader, Inter, and JetBrains Mono, including the weights and italic styles the interface uses. If those font files are not already on the device, Google Play services may download them from Google.</dd>
+          <dt>Whether it is collected</dt>
+          <dd>MarkRead does not collect this request onto its own server. Google may receive the font download request from Google Play services. That request identifies the font family, weight, and style. It does not include your notes, file names, file paths, reading progress, or search text.</dd>
+          <dt>Whether it is stored</dt>
+          <dd>MarkRead does not keep a server copy of the request. Google Play services may cache the font files on the device.</dd>
+          <dt>Whether it leaves the device</dt>
+          <dd>The font-file request can leave the device, sent by Google Play services to Google, when the fonts are not already cached. Your note contents do not leave the device as part of that request.</dd>
+          <dt>Why it is used</dt>
+          <dd>To display the app’s reading and interface typefaces.</dd>
+          <dt>Who receives it</dt>
+          <dd>Google, through Google Play services, when a font file has to be downloaded. The developer does not receive the request. Google’s handling of data it receives is described in <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>.</dd>
+          <dt>How long it is retained</dt>
+          <dd>MarkRead does not set a retention period for any copy Google keeps of a font request. Font files cached by Google Play services remain under that service’s control. Uninstalling MarkRead does not by itself delete fonts cached for the device by Google Play services.</dd>
+          <dt>How you can limit it</dt>
+          <dd>The app does not include a switch that turns this font request off. The app declares internet permission. MarkRead’s own code does not include a networking client and does not call a server operated by the developer.</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h3>Diagnostic messages on the device</h3>
+        <dl>
+          <dt>What data is involved</dt>
+          <dd>The app writes a local log entry with the count of Markdown files it indexed. If the media index query fails, or if deleting a file through the system fails, it writes a local warning. A delete-failure log can include the file’s content address.</dd>
+          <dt>Whether it is collected</dt>
+          <dd>No. The app does not include a crash-reporting or analytics SDK, and it does not transmit these logs.</dd>
+          <dt>Whether it is stored</dt>
+          <dd>They are written to the device log, which Android manages.</dd>
+          <dt>Whether it leaves the device</dt>
+          <dd>Not by MarkRead. If you later choose to send an Android bug report, the system’s bug-report flow can include device logs. MarkRead does not start that flow.</dd>
+          <dt>Why it is used</dt>
+          <dd>To record scan and delete problems on the device while the app is running.</dd>
+          <dt>Who receives it</dt>
+          <dd>No third party receives these logs from MarkRead.</dd>
+          <dt>How long it is retained, and how you can delete it</dt>
+          <dd>Android clears the device log on its own schedule, and a restart typically clears it. MarkRead does not offer a log viewer or a log-delete button.</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section id="not-collected">
+      <h2>Information we do not collect</h2>
+      <p>Inspection of the app source shows that MarkRead does not request or use the following, and does not include SDKs that do:</p>
+      <ul>
+        <li>Account registration, sign-in, passwords, or profile details</li>
+        <li>Your name, email address, phone number, or contacts</li>
+        <li>Location</li>
+        <li>Camera or microphone</li>
+        <li>Advertising ID</li>
+        <li>Photos, video, or audio as a media library. The storage scan looks for Markdown file names.</li>
+        <li>Analytics events or crash reports sent to a reporting service</li>
+        <li>Advertising</li>
+        <li>Payment or purchase history</li>
+        <li>A WebView. The app also does not download images referenced inside a Markdown note. Image markup is shown as its text label.</li>
+      </ul>
+      <p>Library search compares what you type with file names only. It does not index note text for search.</p>
+      <p>The app manifest does not declare location, camera, microphone, photo, video, or audio permissions. Internet permission is declared. The app’s own code does not use it to contact a developer server.</p>
+    </section>
+
+    <section id="use">
+      <h2>How we use information</h2>
+      <ul>
+        <li>File details are used to list Markdown notes and to refresh that list.</li>
+        <li>Note text is used to display the note you open and to build a PDF when you choose Download as PDF.</li>
+        <li>Reading flags and resume position are used for the Read, Unread, and Recent filters, and to reopen an unfinished note near where you left it.</li>
+        <li>The first-launch flag is used so the first launch can scan before showing the library.</li>
+        <li>Search text is used only to filter file names on the device.</li>
+        <li>Notification permission is used to show the status of a PDF export on the device.</li>
+        <li>The font request is used to load Newsreader, Inter, and JetBrains Mono.</li>
+        <li>A link you tap is used only to open that address in another app.</li>
+      </ul>
+      <p>MarkRead does not use this information for advertising, sale of personal information, cross-app tracking, credit decisions, or account profiling. There is no account to profile.</p>
+    </section>
+
+    <section id="storage">
+      <h2>Data storage</h2>
+      <ul>
+        <li>The catalog and reading record are stored in the private database <code>markdownone.db</code>.</li>
+        <li>The first-launch flag is stored in private SharedPreferences named <code>markdown_one_launch</code>.</li>
+        <li>Search text is kept in memory for the current library screen.</li>
+        <li>Note text is read into memory while a note is open or while a PDF is being built. It is not written into the catalog database.</li>
+        <li>Exported PDFs are stored in the device’s Downloads folder.</li>
+        <li>A PDF export job’s document id, file name, and file address are stored in private app storage until the job finishes.</li>
+        <li>Android backup of MarkRead data is turned off. Cloud backup and device-to-device transfer rules exclude the app’s files, database, preferences, and external data.</li>
+      </ul>
+    </section>
+
+    <section id="sharing">
+      <h2>Data sharing and third parties</h2>
+      <p>The developer does not sell your information and does not transfer your notes, catalog, or reading activity to a data broker, advertiser, or analytics company.</p>
+      <p>Information moves outside MarkRead only in these cases:</p>
+      <ul>
+        <li><strong>Google Play services font provider.</strong> Google may receive a request for the font files named above when they are not already on the device. That request does not include your notes. See <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>.</li>
+        <li><strong>An app you choose.</strong> Tapping a link opens it in a browser app, if one is installed. Opening a finished PDF uses a system chooser. MarkRead does not send either action to an analytics or advertising service.</li>
+      </ul>
+      <p>These libraries run on the device and do not receive your notes as a network service: AndroidX, Jetpack Compose, Room, WorkManager, Dagger Hilt, Kotlin coroutines, kotlinx.serialization, and CommonMark. They parse, store, or schedule work locally. They are not analytics, advertising, or sign-in services.</p>
+      <p>The app source does not include Firebase, Crashlytics, Google Analytics, AdMob, or a sign-in SDK, and it does not include a Firebase configuration file.</p>
+    </section>
+
+    <section id="security">
+      <h2>Data security</h2>
+      <ul>
+        <li>The catalog database and the first-launch preference are stored in the app’s private storage. Other apps cannot read that storage by default.</li>
+        <li>Android backup of this app’s data is disabled, including cloud backup and device-to-device transfer of the app’s files, database, and preferences.</li>
+        <li>The file provider used so another app can read a PDF on older Android versions is not exported.</li>
+        <li>MarkRead does not add its own encryption layer to the local database. That database is protected by Android’s app sandbox and your device lock.</li>
+        <li>Markdown files and exported PDFs in shared storage, such as Downloads, are ordinary files. Another app that you have allowed to read storage can read them. MarkRead does not encrypt those shared files.</li>
+        <li>The developer does not hold a server copy of your notes.</li>
+      </ul>
+    </section>
+
+    <section id="retention">
+      <h2>Data retention</h2>
+      <p>MarkRead does not retain your notes or reading activity on a server, because it does not send them to one. On the device:</p>
+      <ul>
+        <li><strong>Catalog and reading record:</strong> kept until the note is deleted in the app, a refresh no longer finds the file, you clear app storage, or you uninstall the app.</li>
+        <li><strong>First-launch flag:</strong> kept until you clear app storage or uninstall the app.</li>
+        <li><strong>Search text:</strong> kept in memory only while you are using that search.</li>
+        <li><strong>Open note text:</strong> kept in memory while the note is open or while a PDF is being built.</li>
+        <li><strong>Exported PDF:</strong> kept in Downloads until you delete the file.</li>
+        <li><strong>PDF job details:</strong> kept on the device until the job completes or is discarded.</li>
+        <li><strong>Font files cached by Google Play services:</strong> retained by Google Play services, not by a schedule set in MarkRead.</li>
+      </ul>
+      <p>To remove MarkRead’s private data, open Android Settings, then Apps, then MarkRead, then Storage, and clear storage. You can also uninstall MarkRead. Those steps do not delete Markdown files or PDFs that are still in shared storage. Use Delete on a note to remove that Markdown file, and use Downloads or Files to remove a PDF.</p>
+    </section>
+
+    <section id="accounts">
+      <h2>Account creation and deletion</h2>
+      <p>MarkRead does not provide account creation. It does not ask you to register, sign in, or provide an email address or password, and it does not create a user id.</p>
+      <p>The app does not maintain user accounts. There is no account to delete inside the app or on a website. This page is a privacy policy. It is not an account-deletion page.</p>
+      <p>You can still remove the app’s local data by clearing MarkRead’s storage or uninstalling it, and you can delete individual notes from the document list.</p>
+    </section>
+
+    <section id="choices">
+      <h2>User choices and rights</h2>
+      <ul>
+        <li><strong>Storage access.</strong> You can deny All files access or the older storage permission. Without it, MarkRead cannot index Markdown files in shared storage. You can turn the permission off later in Android Settings.</li>
+        <li><strong>Notifications.</strong> You can deny notification permission. MarkRead then does not show PDF export notifications. You can turn the permission off in Android Settings.</li>
+        <li><strong>Notes.</strong> You choose which Markdown files to keep on the device. Swipe Delete removes a note and its catalog row.</li>
+        <li><strong>Read state.</strong> You can mark a note read or unread.</li>
+        <li><strong>Links and PDFs.</strong> You choose whether to tap a link or open a PDF in another app.</li>
+        <li><strong>App-private data.</strong> Clear MarkRead’s storage or uninstall the app to remove the catalog, reading record, and first-launch flag.</li>
+      </ul>
+      <p>The developer does not hold a remote copy of your notes or reading history. A request to access, correct, or erase a server copy cannot return or delete one, because none is kept. Email <a href="mailto:markread.support@gmail.com">markread.support@gmail.com</a> if you believe something different has happened, or if the privacy law where you live gives you a right you want to exercise.</p>
+    </section>
+
+    <section id="children">
+      <h2>Children’s privacy</h2>
+      <p>MarkRead — Markdown Reader is a general-purpose reader for files on a device. It is not directed at children under 13, and it does not knowingly collect personal information from children. The app does not ask for a child’s name, email address, or account.</p>
+      <p>If you are a parent and you believe a child has sent personal information to the developer about MarkRead, email <a href="mailto:markread.support@gmail.com">markread.support@gmail.com</a>.</p>
+    </section>
+
+    <section id="services">
+      <h2>Third-party services</h2>
+      <p><strong>Google Play services</strong> (Google), on-device font provider. Used to obtain the Newsreader, Inter, and JetBrains Mono font files. Google’s processing of a font download is covered by <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>.</p>
+      <p><strong>Other apps on your device</strong> that open web links or PDF files. They receive data only after you tap a link or open an exported PDF. Their privacy practices are their own.</p>
+      <p>This page is static HTML. It does not set cookies, and it does not use analytics, advertising, or third-party scripts. You do not need an account to read it.</p>
+    </section>
+
+    <section id="changes">
+      <h2>Changes to this Privacy Policy</h2>
+      <p>If the app’s data practices change, this page will be updated and the date at the top will change. The updated page will stay at this same public address. MarkRead does not have accounts, so the developer cannot email policy changes through an in-app account.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact us</h2>
+      <p>Privacy and support questions about MarkRead — Markdown Reader:</p>
+      <p><a href="mailto:markread.support@gmail.com">markread.support@gmail.com</a></p>
+      <p>Developer: Mohammad Arman, <a href="mailto:armanjmi2022@gmail.com">armanjmi2022@gmail.com</a></p>
+      <p>Include enough detail to identify the request. Do not send the contents of your notes unless you intend to share them. The developer does not already have them.</p>
+    </section>
+
+    <footer>
+      <p>Privacy Policy for MarkRead — Markdown Reader, Android application ID com.reyaz.markread. This page is HTML, available over HTTPS, and does not require a login.</p>
+    </footer>
+  </main>
+</body>
+</html>
