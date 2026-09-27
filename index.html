@@ -39,7 +39,7 @@
 
     <section id="about">
       <h2>About MarkRead</h2>
-      <p>MarkRead — Markdown Reader is an Android app that lists Markdown notes from folders you choose, and from files you select, and opens them for reading. You can mark a note read or unread, resume an unfinished note, and save a PDF copy of an open note.</p>
+      <p>MarkRead — Markdown Reader is an Android app that lists Markdown notes from folders you choose, and opens them for reading. You can mark a note read or unread, resume an unfinished note, and save a PDF copy of an open note.</p>
       <p>The name shown on the device is <strong>MarkRead</strong>. The Android application ID is <strong>com.reyaz.markread</strong>.</p>
       <p>MarkRead does not create user accounts and does not upload your notes to a server operated by the developer. The library, search, and reading record stay on the device, except for the cases described in this policy: a font-file request handled by Google Play services, and a link or PDF that you choose to open in another app.</p>
     </section>
@@ -86,7 +86,7 @@
         <h3>Storage access used to find those files</h3>
         <dl>
           <dt>What data is involved</dt>
-          <dd>MarkRead does not request All files access and does not scan the whole device. Android does not allow an app to take the Downloads folder itself, so notes in Downloads are selected as individual files. Other notes come from folders you choose with the system folder picker, including a folder inside Downloads. Those file and folder addresses are saved on the device so later launches can open them again.</dd>
+          <dd>MarkRead does not request All files access and does not scan the whole device. It asks you to choose one or more folders with the system folder picker. The addresses of those folders are saved on the device so later launches can open them again.</dd>
           <dt>What the scan covers</dt>
           <dd>Only the folders you grant. Inside each folder, the app looks up to eight directory levels deep for files named <code>.md</code> or <code>.markdown</code>. It skips hidden folders and folders named android, cache, tmp, temp, .thumbnails, and lost.dir. It does not read other file types.</dd>
           <dt>Whether it is collected or leaves the device</dt>
@@ -94,9 +94,9 @@
           <dt>Why it is used</dt>
           <dd>To list, open, and delete Markdown notes inside the folders you selected.</dd>
           <dt>Where it is stored and who receives it</dt>
-          <dd>The granted file and folder addresses are stored in private app preferences named <code>markdown_granted_folders</code>. File details from the scan are stored only in the on-device catalog. No third party receives the scan.</dd>
+          <dd>The granted folder addresses are stored in private app preferences named <code>markdown_granted_folders</code>. File details from the scan are stored only in the on-device catalog. No third party receives the scan.</dd>
           <dt>How long it is retained, and how you can delete it</dt>
-          <dd>The file and folder grants stay until you clear MarkRead’s storage or uninstall the app. You can decline the picker. The catalog created from a scan follows the retention rules for Markdown files above.</dd>
+          <dd>The folder grants stay until you clear MarkRead’s storage or uninstall the app. You can decline the folder picker. The catalog created from a scan follows the retention rules for Markdown files above.</dd>
         </dl>
       </article>
 
@@ -270,7 +270,7 @@
       <ul>
         <li>The catalog and reading record are stored in the private database <code>markdownone.db</code>.</li>
         <li>The first-launch flag is stored in private SharedPreferences named <code>markdown_one_launch</code>.</li>
-        <li>The addresses of files and folders you grant are stored in private SharedPreferences named <code>markdown_granted_folders</code>.</li>
+        <li>The addresses of folders you grant are stored in private SharedPreferences named <code>markdown_granted_folders</code>.</li>
         <li>Search text is kept in memory for the current library screen.</li>
         <li>Note text is read into memory while a note is open or while a PDF is being built. It is not written into the catalog database.</li>
         <li>On Android 10 and later, exported PDFs are stored in Downloads. On older Android versions, they are stored in the app’s private files.</li>
@@ -328,7 +328,7 @@
     <section id="choices">
       <h2>User choices and rights</h2>
       <ul>
-        <li><strong>Files and folders.</strong> You choose Markdown files, including files inside Downloads, and any other folders MarkRead may read. If you do not choose any, the library stays empty. Clearing MarkRead’s storage removes those grants.</li>
+        <li><strong>Folders.</strong> You choose which folders MarkRead may read. If you do not choose a folder, the library stays empty. Clearing MarkRead’s storage removes those folder grants.</li>
         <li><strong>Notifications.</strong> You can deny notification permission. MarkRead then does not show PDF export notifications. You can turn the permission off in Android Settings.</li>
         <li><strong>Notes.</strong> You choose which Markdown files to keep on the device. Swipe Delete removes a note and its catalog row.</li>
         <li><strong>Read state.</strong> You can mark a note read or unread.</li>
